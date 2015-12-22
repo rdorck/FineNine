@@ -37,6 +37,7 @@
 		967A25BB1C1BC41C00141B4B /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 967A25BA1C1BC41C00141B4B /* SWRevealViewController.m */; };
 		967A25C01C1BC5B700141B4B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967A25BF1C1BC5B700141B4B /* ProfileViewController.swift */; };
 		967A25C21C1BC72B00141B4B /* BackTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967A25C11C1BC72B00141B4B /* BackTableViewController.swift */; };
+		96D360941C299DE600355C84 /* Wine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D360931C299DE600355C84 /* Wine.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		967A25BA1C1BC41C00141B4B /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		967A25BF1C1BC5B700141B4B /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		967A25C11C1BC72B00141B4B /* BackTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackTableViewController.swift; sourceTree = "<group>"; };
+		96D360931C299DE600355C84 /* Wine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wine.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +155,7 @@
 				9676C7501C28649500E41CF8 /* RatingControl.swift */,
 				9676C7531C287D5500E41CF8 /* WineListViewController.swift */,
 				9676C7551C287DBF00E41CF8 /* WineListTableViewCell.swift */,
+				96D360931C299DE600355C84 /* Wine.swift */,
 			);
 			name = WineList;
 			sourceTree = "<group>";
@@ -407,6 +410,7 @@
 				964CB3971C1CA95A00E295DC /* VineyardsViewController.swift in Sources */,
 				967A25C01C1BC5B700141B4B /* ProfileViewController.swift in Sources */,
 				9676C74F1C28542F00E41CF8 /* WineViewController.swift in Sources */,
+				96D360941C299DE600355C84 /* Wine.swift in Sources */,
 				9676C7541C287D5500E41CF8 /* WineListViewController.swift in Sources */,
 				967A25671C1BC2AD00141B4B /* AppDelegate.swift in Sources */,
 				967A25BB1C1BC41C00141B4B /* SWRevealViewController.m in Sources */,
