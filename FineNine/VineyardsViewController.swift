@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class VineyardsViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
+class VineyardsViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var map: MKMapView!
@@ -21,6 +21,8 @@ class VineyardsViewController: UIViewController, MKMapViewDelegate, CLLocationMa
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.navigationController?.navigationBar.barTintColor = UIColor.purpleColor()
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         menuButton.target = self.revealViewController()
         menuButton.action = "revealToggle:"
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())

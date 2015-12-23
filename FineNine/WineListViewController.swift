@@ -23,8 +23,12 @@ class WineListViewController: UIViewController, UINavigationControllerDelegate, 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.navigationController?.navigationBar.barTintColor = UIColor.purpleColor()
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         
+        self.navigationItem.leftBarButtonItem = editButtonItem()
         //loadSampleWines()
         
     }
@@ -102,6 +106,19 @@ class WineListViewController: UIViewController, UINavigationControllerDelegate, 
         
         return cell
     }
+    
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == .Delete {
+            PFWines.removeAtIndex(indexPath.row)
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+        }
+    }
+    
+    
     
     
     // MARK: Navigation
