@@ -17,6 +17,7 @@ class PFWine: PFObject, PFSubclassing {
     @NSManaged var name: String?
     @NSManaged var photo: PFFile?
     @NSManaged var rating: Int
+    @NSManaged var sweetness: Int
     @NSManaged var alcohol: Int
     @NSManaged var country: String?
     

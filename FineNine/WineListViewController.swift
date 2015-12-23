@@ -27,7 +27,6 @@ class WineListViewController: UIViewController, UINavigationControllerDelegate, 
         
         //loadSampleWines()
         
-        
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -57,6 +56,7 @@ class WineListViewController: UIViewController, UINavigationControllerDelegate, 
             }
         }
     }
+    
     
     func loadSampleWines() {
         
@@ -92,7 +92,6 @@ class WineListViewController: UIViewController, UINavigationControllerDelegate, 
         let cell = tblView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! WineListTableViewCell
         
 //        let wine = wines[indexPath.row]
-//        
 //        cell.nameLabel.text = wine.name
 //        cell.wineImageView.image = wine.photo
 //        cell.ratingControl.rating = wine.rating

@@ -13,8 +13,10 @@ class WineViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
     // MARK: Properties
     
     @IBOutlet weak var wineTextField: UITextField!
+    @IBOutlet weak var countryTextField: UITextField!
     @IBOutlet weak var wineImageView: UIImageView!
     @IBOutlet weak var ratingControl: RatingControl!
+    @IBOutlet weak var sweetnessRatingControl: SweetnessRatingControl!
     
     @IBOutlet weak var cancelButton: UIBarButtonItem!
     @IBOutlet weak var saveButton: UIBarButtonItem!
@@ -30,11 +32,14 @@ class WineViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
         if let wine = pfWine {
             navigationItem.title = wine.name
             wineTextField.text = wine.name
+            countryTextField.text = wine.country
             wineImageView.image = wine.image
             ratingControl.rating = wine.rating
+            sweetnessRatingControl.rating = wine.sweetness
         }
         
         checkValidWineName()
+        checkValidCountryName()
     }
 
     
@@ -54,8 +59,14 @@ class WineViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
         saveButton.enabled = !text.isEmpty
     }
     
+    func checkValidCountryName() {
+        let text = countryTextField.text ?? ""
+        saveButton.enabled = !text.isEmpty
+    }
+    
     func textFieldDidEndEditing(textField: UITextField) {
         checkValidWineName()
+        checkValidCountryName()
         navigationItem.title = wineTextField.text
     }
     
@@ -91,15 +102,19 @@ class WineViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if saveButton === sender {
             let name = wineTextField.text ?? ""
+            let country = countryTextField.text ?? ""
             let image = wineImageView.image
             let rating = ratingControl.rating
+            let sweet = sweetnessRatingControl.rating
             
             //wine = Wine(name: name, photo: photo, rating: rating)
             
             pfWine = PFWine()
             pfWine?.name = name
+            pfWine?.country = country
             pfWine?.image = image
             pfWine?.rating = rating
+            pfWine?.sweetness = sweet
             pfWine?.uploadWine()
         }
     }
@@ -109,6 +124,7 @@ class WineViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
     
     @IBAction func selectImageFromPhotoLibrary(sender: UITapGestureRecognizer) {
         wineTextField.resignFirstResponder()
+        countryTextField.resignFirstResponder()
         
         let imagePickerController = UIImagePickerController()
         

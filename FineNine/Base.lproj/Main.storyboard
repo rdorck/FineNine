@@ -331,16 +331,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="0Bn-BO-KtZ">
-                                <rect key="frame" x="20" y="80" width="560" height="424"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="0Bn-BO-KtZ">
+                                <rect key="frame" x="20" y="80" width="560" height="561"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter wine name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ol2-yX-Enz">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter wine name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ol2-yX-Enz">
                                         <rect key="frame" x="0.0" y="0.0" width="560" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Country of Origin" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cbw-iO-obc">
+                                        <rect key="frame" x="0.0" y="42" width="560" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                     <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="0Ti-lq-zQw">
-                                        <rect key="frame" x="120" y="42" width="320" height="320"/>
+                                        <rect key="frame" x="120" y="84" width="320" height="320"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="0Ti-lq-zQw" secondAttribute="height" multiplier="1:1" id="dSD-gG-giN"/>
@@ -350,13 +355,32 @@
                                         </connections>
                                     </imageView>
                                     <view contentMode="scaleToFill" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="50" translatesAutoresizingMaskIntoConstraints="NO" id="R8A-sD-9l8" customClass="RatingControl" customModule="FineNine" customModuleProvider="target">
-                                        <rect key="frame" x="160" y="374" width="240" height="50"/>
+                                        <rect key="frame" x="160" y="416" width="240" height="50"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sweetness" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="29g-aC-Zg0">
+                                        <rect key="frame" x="225" y="478" width="110" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="110" id="FZX-mz-huL"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ApW-jx-odC" customClass="SweetnessRatingControl" customModule="FineNine" customModuleProvider="target">
+                                        <rect key="frame" x="160" y="511" width="240" height="50"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="cbw-iO-obc" firstAttribute="leading" secondItem="0Bn-BO-KtZ" secondAttribute="leadingMargin" id="1XA-AV-VJR"/>
+                                    <constraint firstItem="cbw-iO-obc" firstAttribute="top" secondItem="Ol2-yX-Enz" secondAttribute="bottom" id="Cas-8T-vdK"/>
+                                    <constraint firstItem="0Ti-lq-zQw" firstAttribute="top" secondItem="cbw-iO-obc" secondAttribute="bottom" constant="12" id="Ykf-K1-ag2"/>
+                                    <constraint firstItem="ApW-jx-odC" firstAttribute="top" secondItem="29g-aC-Zg0" secondAttribute="bottom" constant="12" id="mno-vJ-ROJ"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="cbw-iO-obc" secondAttribute="trailing" id="rSY-lW-gJm"/>
                                     <constraint firstAttribute="trailing" secondItem="Ol2-yX-Enz" secondAttribute="trailing" id="vMm-Dl-xbV"/>
                                     <constraint firstItem="Ol2-yX-Enz" firstAttribute="leading" secondItem="0Bn-BO-KtZ" secondAttribute="leading" id="xnl-hA-7aM"/>
+                                    <constraint firstItem="29g-aC-Zg0" firstAttribute="top" secondItem="R8A-sD-9l8" secondAttribute="bottom" constant="12" id="zcl-tD-ODh"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -381,8 +405,10 @@
                     </navigationItem>
                     <connections>
                         <outlet property="cancelButton" destination="LlD-fu-YKT" id="noU-zF-Zl7"/>
+                        <outlet property="countryTextField" destination="cbw-iO-obc" id="Mpr-iX-gcU"/>
                         <outlet property="ratingControl" destination="R8A-sD-9l8" id="Yla-7C-4t0"/>
                         <outlet property="saveButton" destination="aT4-di-U8P" id="bzY-MP-uk5"/>
+                        <outlet property="sweetnessRatingControl" destination="ApW-jx-odC" id="ohk-bg-0m9"/>
                         <outlet property="wineImageView" destination="0Ti-lq-zQw" id="CKY-Vb-Yum"/>
                         <outlet property="wineTextField" destination="Ol2-yX-Enz" id="4RX-25-445"/>
                     </connections>
