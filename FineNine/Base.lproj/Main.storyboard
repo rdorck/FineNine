@@ -249,10 +249,10 @@
             </objects>
             <point key="canvasLocation" x="2385" y="387"/>
         </scene>
-        <!--Wine List-->
+        <!--Your Wines-->
         <scene sceneID="Efs-LL-VHP">
             <objects>
-                <viewController id="3v5-3J-pEb" customClass="WineListViewController" customModule="FineNine" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WineListViewController" id="3v5-3J-pEb" customClass="WineListViewController" customModule="FineNine" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SUy-SZ-u9m"/>
                         <viewControllerLayoutGuide type="bottom" id="YN8-1W-Cff"/>
@@ -291,6 +291,7 @@
                                             <outlet property="nameLabel" destination="b6w-5D-jR0" id="XAO-en-jqT"/>
                                             <outlet property="ratingControl" destination="mIp-qo-GgG" id="vXN-4P-Fha"/>
                                             <outlet property="wineImageView" destination="S7p-co-gSK" id="Piw-zK-9V5"/>
+                                            <segue destination="dNJ-xe-R5q" kind="show" identifier="segueShowDetail" id="scm-Q3-XgE"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -302,17 +303,15 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Wine List" id="UjX-Hp-k8p">
-                        <barButtonItem key="leftBarButtonItem" title="Menu" id="Pej-UR-XY0"/>
+                    <navigationItem key="navigationItem" title="Your Wines" id="UjX-Hp-k8p">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="DrM-Kz-FGc">
                             <connections>
-                                <segue destination="dNJ-xe-R5q" kind="show" id="igQ-O4-Pnb"/>
+                                <segue destination="dNJ-xe-R5q" kind="show" identifier="segueAddWine" id="052-8h-a2L"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="addButton" destination="DrM-Kz-FGc" id="uWf-EG-nSh"/>
-                        <outlet property="menuButton" destination="Pej-UR-XY0" id="hgW-gI-ksL"/>
                         <outlet property="tblView" destination="f4k-eJ-gpF" id="xlZ-il-6wh"/>
                     </connections>
                 </viewController>
@@ -320,7 +319,7 @@
             </objects>
             <point key="canvasLocation" x="3191" y="1151"/>
         </scene>
-        <!--Wine View Controller-->
+        <!--New Wine-->
         <scene sceneID="T6f-C5-Vh7">
             <objects>
                 <viewController id="dNJ-xe-R5q" customClass="WineViewController" customModule="FineNine" customModuleProvider="target" sceneMemberID="viewController">
@@ -332,22 +331,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="0Bn-BO-KtZ">
-                                <rect key="frame" x="20" y="80" width="560" height="457"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="0Bn-BO-KtZ">
+                                <rect key="frame" x="20" y="80" width="560" height="424"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wine Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="58t-gM-qSi">
-                                        <rect key="frame" x="236" y="0.0" width="89" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter wine name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ol2-yX-Enz">
-                                        <rect key="frame" x="0.0" y="33" width="560" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
                                     <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="0Ti-lq-zQw">
-                                        <rect key="frame" x="120" y="75" width="320" height="320"/>
+                                        <rect key="frame" x="120" y="42" width="320" height="320"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="0Ti-lq-zQw" secondAttribute="height" multiplier="1:1" id="dSD-gG-giN"/>
@@ -357,7 +350,7 @@
                                         </connections>
                                     </imageView>
                                     <view contentMode="scaleToFill" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="50" translatesAutoresizingMaskIntoConstraints="NO" id="R8A-sD-9l8" customClass="RatingControl" customModule="FineNine" customModuleProvider="target">
-                                        <rect key="frame" x="160" y="407" width="240" height="50"/>
+                                        <rect key="frame" x="160" y="374" width="240" height="50"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
                                 </subviews>
@@ -369,25 +362,40 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="0Bn-BO-KtZ" firstAttribute="top" secondItem="8Mz-Zg-DT0" secondAttribute="bottom" constant="60" id="Err-R5-AZA"/>
+                            <constraint firstItem="0Bn-BO-KtZ" firstAttribute="top" secondItem="8Mz-Zg-DT0" secondAttribute="bottom" constant="16" id="Err-R5-AZA"/>
                             <constraint firstItem="0Bn-BO-KtZ" firstAttribute="leading" secondItem="kFM-4m-qAw" secondAttribute="leadingMargin" id="Man-36-3sl"/>
                             <constraint firstAttribute="trailingMargin" secondItem="0Bn-BO-KtZ" secondAttribute="trailing" id="zYA-dO-L69"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="New Wine" id="Myb-aK-SBu">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="LlD-fu-YKT">
+                            <connections>
+                                <action selector="cancelButtonTapped:" destination="dNJ-xe-R5q" id="uQ1-oC-Bzq"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="aT4-di-U8P">
+                            <connections>
+                                <segue destination="qvn-wA-WG2" kind="unwind" unwindAction="unwindToWineList:" id="rPM-Lf-iHD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="cancelButton" destination="LlD-fu-YKT" id="noU-zF-Zl7"/>
                         <outlet property="ratingControl" destination="R8A-sD-9l8" id="Yla-7C-4t0"/>
+                        <outlet property="saveButton" destination="aT4-di-U8P" id="bzY-MP-uk5"/>
                         <outlet property="wineImageView" destination="0Ti-lq-zQw" id="CKY-Vb-Yum"/>
                         <outlet property="wineTextField" destination="Ol2-yX-Enz" id="4RX-25-445"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qqi-Ov-Jyq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="qvn-wA-WG2" userLabel="Exit" sceneMemberID="exit"/>
                 <tapGestureRecognizer id="PfN-Nn-5JD">
                     <connections>
                         <action selector="selectImageFromPhotoLibrary:" destination="dNJ-xe-R5q" id="Bat-4D-NwZ"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="3965" y="1151"/>
+            <point key="canvasLocation" x="4669" y="1151"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="E4t-BY-wYh">
@@ -416,4 +424,7 @@
         <image name="green settings game app icon" width="133" height="133"/>
         <image name="home teal game app icon" width="133" height="133"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="052-8h-a2L"/>
+    </inferredMetricsTieBreakers>
 </document>

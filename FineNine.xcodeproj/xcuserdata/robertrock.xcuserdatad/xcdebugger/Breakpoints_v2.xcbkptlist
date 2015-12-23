@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FineNine/WineViewController.swift"
-            timestampString = "472414953.578432"
+            timestampString = "472501519.495"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
             landmarkName = "viewDidLoad()"
             landmarkType = "5">
          </BreakpointContent>
@@ -25,14 +25,14 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FineNine/WineListViewController.swift"
-            timestampString = "472490929.941639"
+            filePath = "FineNine/PFWine.swift"
+            timestampString = "472509477.483977"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "loadSampleWines()"
-            landmarkType = "5">
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "PFWine"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
