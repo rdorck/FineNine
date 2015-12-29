@@ -33,7 +33,7 @@ class VineyardsViewController: UIViewController, MKMapViewDelegate, CLLocationMa
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         //locationManager.requestWhenInUseAuthorization()
         locationManager.requestAlwaysAuthorization()
-        locationManager.startUpdatingLocation()
+        //locationManager.startUpdatingLocation()
         
         
         // Chadsford Winery -> 39.8725905,-75.6267942,

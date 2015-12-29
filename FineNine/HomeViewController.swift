@@ -10,7 +10,7 @@ import UIKit
 import Parse
 import Bolts
 
-class ProfileViewController: UIViewController, UINavigationControllerDelegate {
+class HomeViewController: UIViewController, UINavigationControllerDelegate {
 
     @IBOutlet weak var menuButton: UIBarButtonItem!
     

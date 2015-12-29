@@ -35,7 +35,7 @@
 		967A25B41C1BC35200141B4B /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 967A25B31C1BC35200141B4B /* libz.1.2.5.tbd */; };
 		967A25B61C1BC35F00141B4B /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 967A25B51C1BC35F00141B4B /* libsqlite3.tbd */; };
 		967A25BB1C1BC41C00141B4B /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 967A25BA1C1BC41C00141B4B /* SWRevealViewController.m */; };
-		967A25C01C1BC5B700141B4B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967A25BF1C1BC5B700141B4B /* ProfileViewController.swift */; };
+		967A25C01C1BC5B700141B4B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967A25BF1C1BC5B700141B4B /* HomeViewController.swift */; };
 		967A25C21C1BC72B00141B4B /* BackTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967A25C11C1BC72B00141B4B /* BackTableViewController.swift */; };
 		96987DBC1C2B157800BBD701 /* SweetnessRatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96987DBB1C2B157800BBD701 /* SweetnessRatingControl.swift */; };
 		96D360941C299DE600355C84 /* Wine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D360931C299DE600355C84 /* Wine.swift */; };
@@ -96,7 +96,7 @@
 		967A25B81C1BC41B00141B4B /* FineNine-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FineNine-Bridging-Header.h"; sourceTree = "<group>"; };
 		967A25B91C1BC41C00141B4B /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		967A25BA1C1BC41C00141B4B /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
-		967A25BF1C1BC5B700141B4B /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		967A25BF1C1BC5B700141B4B /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		967A25C11C1BC72B00141B4B /* BackTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackTableViewController.swift; sourceTree = "<group>"; };
 		96987DBB1C2B157800BBD701 /* SweetnessRatingControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SweetnessRatingControl.swift; sourceTree = "<group>"; };
 		96D360931C299DE600355C84 /* Wine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wine.swift; sourceTree = "<group>"; };
@@ -144,6 +144,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9604C2BC1C325021007D3998 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9676C7501C28649500E41CF8 /* RatingControl.swift */,
+				96987DBB1C2B157800BBD701 /* SweetnessRatingControl.swift */,
+				9676C7551C287DBF00E41CF8 /* WineListTableViewCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		9604C2BD1C325087007D3998 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				96D360931C299DE600355C84 /* Wine.swift */,
+				96FBD18C1C29CF9F005D7C3E /* PFWine.swift */,
+			);
+			name = Modal;
+			sourceTree = "<group>";
+		};
 		964CB3951C1CA94600E295DC /* Vineyards */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,13 +174,8 @@
 		9676C7521C287D0F00E41CF8 /* WineList */ = {
 			isa = PBXGroup;
 			children = (
-				96D360931C299DE600355C84 /* Wine.swift */,
-				96FBD18C1C29CF9F005D7C3E /* PFWine.swift */,
 				9676C74E1C28542F00E41CF8 /* WineViewController.swift */,
-				9676C7501C28649500E41CF8 /* RatingControl.swift */,
-				96987DBB1C2B157800BBD701 /* SweetnessRatingControl.swift */,
 				9676C7531C287D5500E41CF8 /* WineListViewController.swift */,
-				9676C7551C287DBF00E41CF8 /* WineListTableViewCell.swift */,
 			);
 			name = WineList;
 			sourceTree = "<group>";
@@ -190,7 +204,10 @@
 		967A25651C1BC2AD00141B4B /* FineNine */ = {
 			isa = PBXGroup;
 			children = (
-				967A25941C1BC2C000141B4B /* ViewControllers */,
+				9604C2BD1C325087007D3998 /* Modal */,
+				9604C2BC1C325021007D3998 /* View */,
+				967A25BE1C1BC59900141B4B /* Controller */,
+				967A25B71C1BC3FF00141B4B /* SWRevealViewController */,
 				967A25661C1BC2AD00141B4B /* AppDelegate.swift */,
 				967A256A1C1BC2AD00141B4B /* Main.storyboard */,
 				967A256D1C1BC2AD00141B4B /* Assets.xcassets */,
@@ -216,17 +233,6 @@
 				967A25881C1BC2AD00141B4B /* Info.plist */,
 			);
 			path = FineNineUITests;
-			sourceTree = "<group>";
-		};
-		967A25941C1BC2C000141B4B /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				9676C7521C287D0F00E41CF8 /* WineList */,
-				964CB3951C1CA94600E295DC /* Vineyards */,
-				967A25BE1C1BC59900141B4B /* Profile */,
-				967A25B71C1BC3FF00141B4B /* SWRevealViewController */,
-			);
-			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 		967A25951C1BC2CE00141B4B /* Frameworks */ = {
@@ -271,12 +277,14 @@
 			name = SWRevealViewController;
 			sourceTree = "<group>";
 		};
-		967A25BE1C1BC59900141B4B /* Profile */ = {
+		967A25BE1C1BC59900141B4B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				967A25BF1C1BC5B700141B4B /* ProfileViewController.swift */,
+				967A25BF1C1BC5B700141B4B /* HomeViewController.swift */,
+				9676C7521C287D0F00E41CF8 /* WineList */,
+				964CB3951C1CA94600E295DC /* Vineyards */,
 			);
-			name = Profile;
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -347,6 +355,7 @@
 				TargetAttributes = {
 					967A25621C1BC2AD00141B4B = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = MPR9W654EZ;
 					};
 					967A25761C1BC2AD00141B4B = {
 						CreatedOnToolsVersion = 7.2;
@@ -414,7 +423,7 @@
 				9676C7561C287DBF00E41CF8 /* WineListTableViewCell.swift in Sources */,
 				967A25C21C1BC72B00141B4B /* BackTableViewController.swift in Sources */,
 				964CB3971C1CA95A00E295DC /* VineyardsViewController.swift in Sources */,
-				967A25C01C1BC5B700141B4B /* ProfileViewController.swift in Sources */,
+				967A25C01C1BC5B700141B4B /* HomeViewController.swift in Sources */,
 				9676C74F1C28542F00E41CF8 /* WineViewController.swift in Sources */,
 				96987DBC1C2B157800BBD701 /* SweetnessRatingControl.swift in Sources */,
 				96D360941C299DE600355C84 /* Wine.swift in Sources */,
@@ -562,13 +571,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/parse-library-1.10.0",
 				);
 				INFOPLIST_FILE = FineNine/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = robertock.Development.xcode.FineNine;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rockTech.FineNine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "FineNine/FineNine-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -580,13 +590,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/parse-library-1.10.0",
 				);
 				INFOPLIST_FILE = FineNine/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = robertock.Development.xcode.FineNine;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rockTech.FineNine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "FineNine/FineNine-Bridging-Header.h";
 			};

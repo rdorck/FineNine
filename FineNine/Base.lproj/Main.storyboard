@@ -59,30 +59,8 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Dino Nug" textLabel="JM7-MQ-ZQ9" imageView="6wP-Kv-HVa" rowHeight="50" style="IBUITableViewCellStyleDefault" id="e9S-SE-2N8">
-                                <rect key="frame" x="0.0" y="78" width="600" height="50"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="e9S-SE-2N8" id="Ivj-lT-eBl">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="49.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Dino Nug" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JM7-MQ-ZQ9">
-                                            <rect key="frame" x="80" y="0.0" width="505" height="49.5"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="Dinosaur-100" id="6wP-Kv-HVa">
-                                            <rect key="frame" x="15" y="0.0" width="50" height="49.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </imageView>
-                                    </subviews>
-                                </tableViewCellContentView>
-                                <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
-                            </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Vineyards" textLabel="Oge-SQ-HNB" imageView="36L-hH-CNr" rowHeight="50" style="IBUITableViewCellStyleDefault" id="SZY-QM-GG6">
-                                <rect key="frame" x="0.0" y="128" width="600" height="50"/>
+                                <rect key="frame" x="0.0" y="78" width="600" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SZY-QM-GG6" id="iek-0v-tZI">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="49.5"/>
@@ -107,7 +85,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Wines" textLabel="Fke-Wj-lu2" imageView="XW0-u5-ddf" rowHeight="50" style="IBUITableViewCellStyleDefault" id="ya2-7q-93X">
-                                <rect key="frame" x="0.0" y="178" width="600" height="50"/>
+                                <rect key="frame" x="0.0" y="128" width="600" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ya2-7q-93X" id="Pzk-kA-qR0">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="49.5"/>
@@ -132,7 +110,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Settings" textLabel="sin-Uf-t1E" imageView="hpq-EA-n9j" rowHeight="50" style="IBUITableViewCellStyleDefault" id="5PH-ED-R2q">
-                                <rect key="frame" x="0.0" y="228" width="600" height="50"/>
+                                <rect key="frame" x="0.0" y="178" width="600" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5PH-ED-R2q" id="rj3-h0-fId">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="49.5"/>
@@ -167,7 +145,7 @@
         <!--Fine Wine-->
         <scene sceneID="J16-VM-Nsp">
             <objects>
-                <viewController id="zpE-zd-SrQ" customClass="ProfileViewController" customModule="FineNine" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="zpE-zd-SrQ" customClass="HomeViewController" customModule="FineNine" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MHp-02-xo2"/>
                         <viewControllerLayoutGuide type="bottom" id="N4y-24-VqV"/>
@@ -281,35 +259,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="f4k-eJ-gpF">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="600" placeholderIntrinsicHeight="536" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="22" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="f4k-eJ-gpF">
+                                <rect key="frame" x="0.0" y="-1" width="600" height="601"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="90" id="FyZ-N9-Pq4" customClass="WineListTableViewCell" customModule="FineNine" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="92" width="600" height="90"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="244" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="90" id="FyZ-N9-Pq4" customClass="WineListTableViewCell" customModule="FineNine" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="86" width="600" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FyZ-N9-Pq4" id="X3L-0N-28Q">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="89.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="S7p-co-gSK">
-                                                    <rect key="frame" x="0.0" y="0.0" width="97" height="89.5"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="S7p-co-gSK">
+                                                    <rect key="frame" x="0.0" y="0.0" width="97" height="90"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="97" id="k3m-xV-nPw"/>
+                                                    </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b6w-5D-jR0">
-                                                    <rect key="frame" x="105" y="8" width="487" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b6w-5D-jR0">
+                                                    <rect key="frame" x="105" y="0.0" width="487" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="vDb-Zn-4Ym"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mIp-qo-GgG" customClass="RatingControl" customModule="FineNine" customModuleProvider="target">
-                                                    <rect key="frame" x="105" y="37" width="240" height="44"/>
+                                                    <rect key="frame" x="105" y="29" width="180" height="30"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </view>
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6en-rm-hIB" customClass="SweetnessRatingControl" customModule="FineNine" customModuleProvider="target">
+                                                    <rect key="frame" x="105" y="59" width="180" height="30"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </view>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="S7p-co-gSK" firstAttribute="leading" secondItem="X3L-0N-28Q" secondAttribute="leading" id="aKg-gr-tIQ"/>
+                                                <constraint firstItem="S7p-co-gSK" firstAttribute="centerY" secondItem="X3L-0N-28Q" secondAttribute="centerY" id="bWi-Ih-rBw"/>
+                                                <constraint firstItem="b6w-5D-jR0" firstAttribute="leading" secondItem="S7p-co-gSK" secondAttribute="trailing" constant="8" symbolic="YES" id="iOe-gV-9TS"/>
+                                                <constraint firstItem="b6w-5D-jR0" firstAttribute="top" secondItem="X3L-0N-28Q" secondAttribute="topMargin" id="oL1-1q-7mJ"/>
+                                                <constraint firstItem="S7p-co-gSK" firstAttribute="top" secondItem="X3L-0N-28Q" secondAttribute="top" id="qAd-TX-tad"/>
+                                                <constraint firstItem="b6w-5D-jR0" firstAttribute="trailing" secondItem="X3L-0N-28Q" secondAttribute="trailingMargin" id="ry0-FB-21o"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="nameLabel" destination="b6w-5D-jR0" id="XAO-en-jqT"/>
                                             <outlet property="ratingControl" destination="mIp-qo-GgG" id="vXN-4P-Fha"/>
+                                            <outlet property="sweetnessRatingControl" destination="6en-rm-hIB" id="J3l-3F-qv2"/>
                                             <outlet property="wineImageView" destination="S7p-co-gSK" id="Piw-zK-9V5"/>
                                             <segue destination="dNJ-xe-R5q" kind="show" identifier="segueShowDetail" id="scm-Q3-XgE"/>
                                         </connections>
@@ -322,6 +319,14 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="f4k-eJ-gpF" firstAttribute="leading" secondItem="Ccw-oU-Jpt" secondAttribute="leading" id="04T-F8-i0L"/>
+                            <constraint firstItem="f4k-eJ-gpF" firstAttribute="centerY" secondItem="Ccw-oU-Jpt" secondAttribute="centerY" id="KuF-hz-mAs"/>
+                            <constraint firstAttribute="trailing" secondItem="f4k-eJ-gpF" secondAttribute="trailing" id="O3z-4i-Wtj"/>
+                            <constraint firstItem="YN8-1W-Cff" firstAttribute="top" secondItem="f4k-eJ-gpF" secondAttribute="bottom" id="Ykc-50-4Uk"/>
+                            <constraint firstItem="f4k-eJ-gpF" firstAttribute="centerX" secondItem="Ccw-oU-Jpt" secondAttribute="centerX" id="tiA-9v-lGc"/>
+                            <constraint firstItem="f4k-eJ-gpF" firstAttribute="top" secondItem="Ccw-oU-Jpt" secondAttribute="top" constant="1" id="uyq-Ha-yMx"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Your Wines" id="UjX-Hp-k8p">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="DrM-Kz-FGc">
@@ -353,7 +358,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="0Bn-BO-KtZ">
-                                <rect key="frame" x="20" y="80" width="560" height="561"/>
+                                <rect key="frame" x="20" y="80" width="560" height="461"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Wine Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ol2-yX-Enz">
                                         <rect key="frame" x="0.0" y="0.0" width="560" height="30"/>
@@ -365,31 +370,33 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="0Ti-lq-zQw">
-                                        <rect key="frame" x="120" y="84" width="320" height="320"/>
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="0Ti-lq-zQw">
+                                        <rect key="frame" x="170" y="84" width="220" height="220"/>
                                         <gestureRecognizers/>
                                         <constraints>
+                                            <constraint firstAttribute="width" constant="220" id="HsO-W0-Um5"/>
                                             <constraint firstAttribute="width" secondItem="0Ti-lq-zQw" secondAttribute="height" multiplier="1:1" id="dSD-gG-giN"/>
+                                            <constraint firstAttribute="height" constant="220" id="wju-Um-CsF"/>
                                         </constraints>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="PfN-Nn-5JD" appends="YES" id="XLU-AK-2ea"/>
                                         </connections>
                                     </imageView>
-                                    <view contentMode="scaleToFill" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="50" translatesAutoresizingMaskIntoConstraints="NO" id="R8A-sD-9l8" customClass="RatingControl" customModule="FineNine" customModuleProvider="target">
-                                        <rect key="frame" x="160" y="416" width="240" height="50"/>
+                                    <view contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="50" translatesAutoresizingMaskIntoConstraints="NO" id="R8A-sD-9l8" customClass="RatingControl" customModule="FineNine" customModuleProvider="target">
+                                        <rect key="frame" x="160" y="316" width="240" height="50"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sweetness" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="29g-aC-Zg0">
-                                        <rect key="frame" x="225" y="478" width="110" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Sweetness" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="29g-aC-Zg0">
+                                        <rect key="frame" x="225" y="378" width="110" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="110" id="FZX-mz-huL"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ApW-jx-odC" customClass="SweetnessRatingControl" customModule="FineNine" customModuleProvider="target">
-                                        <rect key="frame" x="160" y="511" width="240" height="50"/>
+                                        <rect key="frame" x="160" y="411" width="240" height="50"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
                                 </subviews>
@@ -450,7 +457,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="4669" y="1151"/>
+            <point key="canvasLocation" x="4379" y="1151"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="E4t-BY-wYh">
@@ -472,7 +479,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Dinosaur-100" width="100" height="100"/>
         <image name="Wine Bottle-100" width="100" height="100"/>
         <image name="Wine Tour-100" width="100" height="100"/>
         <image name="defaultPhoto" width="540" height="540"/>

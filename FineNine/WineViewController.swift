@@ -131,7 +131,7 @@ class WineViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
         
         let imagePickerController = UIImagePickerController()
         
-        imagePickerController.sourceType = .PhotoLibrary
+        imagePickerController.sourceType = .Camera
 
         imagePickerController.delegate = self
         

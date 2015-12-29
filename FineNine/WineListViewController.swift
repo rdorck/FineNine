@@ -103,6 +103,7 @@ class WineListViewController: UIViewController, UINavigationControllerDelegate, 
         cell.nameLabel!.text = PFWines[indexPath.row].name
         cell.wineImageView?.image = PFWines[indexPath.row].image
         cell.ratingControl.rating = PFWines[indexPath.row].rating
+        cell.sweetnessRatingControl.rating = PFWines[indexPath.row].sweetness
         
         return cell
     }

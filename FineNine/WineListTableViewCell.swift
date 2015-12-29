@@ -13,6 +13,7 @@ class WineListTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var wineImageView: UIImageView!
     @IBOutlet weak var ratingControl: RatingControl!
+    @IBOutlet weak var sweetnessRatingControl: SweetnessRatingControl!
     
     override func awakeFromNib() {
         super.awakeFromNib()
