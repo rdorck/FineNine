@@ -12,6 +12,10 @@ import Bolts
 
 class HomeViewController: UIViewController, UINavigationControllerDelegate {
 
+    //==========================================================================================================================
+    // MARK: Properties
+    //==========================================================================================================================
+
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
     override func viewDidLoad() {
@@ -28,7 +32,10 @@ class HomeViewController: UIViewController, UINavigationControllerDelegate {
 
     }
 
-   
+    
+    //==========================================================================================================================
     // MARK: - Navigation
+    //==========================================================================================================================
+
 
 }

@@ -10,7 +10,9 @@ import UIKit
 
 class WineViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    //==========================================================================================================================
     // MARK: Properties
+    //==========================================================================================================================
     
     @IBOutlet weak var wineTextField: UITextField!
     @IBOutlet weak var countryTextField: UITextField!
@@ -44,9 +46,11 @@ class WineViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
         checkValidWineName()
         checkValidCountryName()
     }
-
     
+
+    //==========================================================================================================================
     // MARK: TextField Delegate
+    //==========================================================================================================================
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
@@ -74,7 +78,9 @@ class WineViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
     }
     
     
+    //==========================================================================================================================
     // MARK: ImagePickerController Delegate
+    //==========================================================================================================================
     
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
         dismissViewControllerAnimated(true, completion: nil)
@@ -88,8 +94,10 @@ class WineViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
     }
     
     
+    //==========================================================================================================================
     // MARK: Navigation
-    
+    //==========================================================================================================================
+
     @IBAction func cancelButtonTapped(sender: UIBarButtonItem) {
         let isPresentingInAddWineMode = presentingViewController is UINavigationController
         //print("true or false: \(isPresentingInAddWineMode)")
@@ -123,8 +131,10 @@ class WineViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
     }
     
     
+    //==========================================================================================================================
     // MARK: Actions
-    
+    //==========================================================================================================================
+
     @IBAction func selectImageFromPhotoLibrary(sender: UITapGestureRecognizer) {
         wineTextField.resignFirstResponder()
         countryTextField.resignFirstResponder()

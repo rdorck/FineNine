@@ -11,15 +11,21 @@ import Parse
 
 class WineListViewController: UIViewController, UINavigationControllerDelegate, UITableViewDataSource, UITableViewDelegate {
 
-    @IBOutlet weak var addButton: UIBarButtonItem!
-    
-    @IBOutlet weak var tblView: UITableView!
-    
+    //==========================================================================================================================
     // MARK: Properties
+    //==========================================================================================================================
+    
+    @IBOutlet weak var addButton: UIBarButtonItem!
+    @IBOutlet weak var tblView: UITableView!
     
     var wines = [Wine]()
     var PFWines: [PFWine] = []
     
+    
+    //==========================================================================================================================
+    // MARK: Lifecycle
+    //==========================================================================================================================
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -63,7 +69,6 @@ class WineListViewController: UIViewController, UINavigationControllerDelegate, 
     
     
     func loadSampleWines() {
-        
         let photo1 = UIImage(named: "carnivor")
         let wine1 = Wine(name: "Carnivor", photo: photo1, rating: 5)!
         
@@ -77,11 +82,12 @@ class WineListViewController: UIViewController, UINavigationControllerDelegate, 
         let wine4 = Wine(name: "Drops of Jupiter", photo: photo4, rating: 4)!
         
         wines = [wine1, wine2, wine3, wine4]
-        
     }
     
     
+    //==========================================================================================================================
     // MARK: TableView Datasource & Delegate
+    //==========================================================================================================================
 
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -121,8 +127,9 @@ class WineListViewController: UIViewController, UINavigationControllerDelegate, 
     
     
     
-    
+    //==========================================================================================================================
     // MARK: Navigation
+    //==========================================================================================================================
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "segueShowDetail" {

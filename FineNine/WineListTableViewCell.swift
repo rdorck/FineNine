@@ -10,11 +10,20 @@ import UIKit
 
 class WineListTableViewCell: UITableViewCell {
 
+    //==========================================================================================================================
+    // MARK: Properties
+    //==========================================================================================================================
+
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var wineImageView: UIImageView!
     @IBOutlet weak var ratingControl: RatingControl!
     @IBOutlet weak var sweetnessRatingControl: SweetnessRatingControl!
     
+    
+    //==========================================================================================================================
+    // MARK: Lifecycle
+    //==========================================================================================================================
+
     override func awakeFromNib() {
         super.awakeFromNib()
 

@@ -12,11 +12,19 @@ import CoreLocation
 
 class VineyardsViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UINavigationControllerDelegate {
 
+    //==========================================================================================================================
+    // MARK: Properties
+    //==========================================================================================================================
+
     @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var map: MKMapView!
     
     let locationManager = CLLocationManager()
     
+
+    //==========================================================================================================================
+    // MARK: Lifecycle
+    //==========================================================================================================================
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -82,7 +90,7 @@ class VineyardsViewController: UIViewController, MKMapViewDelegate, CLLocationMa
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         //print(locations)
         
-        var currentLocation: CLLocation = locations[0] as! CLLocation
+        let currentLocation: CLLocation = locations[0] as! CLLocation
         
         let latitude = currentLocation.coordinate.latitude
         let longitude = currentLocation.coordinate.longitude
@@ -100,7 +108,10 @@ class VineyardsViewController: UIViewController, MKMapViewDelegate, CLLocationMa
     } // END of locationManager
     
     
-    
+    //==========================================================================================================================
+    // MARK:
+    //==========================================================================================================================
+
     
     
     
