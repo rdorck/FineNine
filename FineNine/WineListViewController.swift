@@ -42,11 +42,12 @@ class WineListViewController: UIViewController, UINavigationControllerDelegate, 
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        //let query = PFQuery(className: "Wine")
         let queryWine = PFWine.query()
         queryWine!.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
             if error == nil {
                 PFObject.pinAllInBackground(objects, block: nil)
+                
+                print("object: \(objects)")
                 
                 self.PFWines = objects as? [PFWine] ?? []
                 
@@ -68,21 +69,21 @@ class WineListViewController: UIViewController, UINavigationControllerDelegate, 
     }
     
     
-    func loadSampleWines() {
-        let photo1 = UIImage(named: "carnivor")
-        let wine1 = Wine(name: "Carnivor", photo: photo1, rating: 5)!
-        
-        let photo2 = UIImage(named: "classico")
-        let wine2 = Wine(name: "Chianti Classico", photo: photo2, rating: 3)!
-        
-        let photo3 = UIImage(named: "cassana")
-        let wine3 = Wine(name: "Cassana", photo: photo3, rating: 2)!
-        
-        let photo4 = UIImage(named: "dropsOfJupiter")
-        let wine4 = Wine(name: "Drops of Jupiter", photo: photo4, rating: 4)!
-        
-        wines = [wine1, wine2, wine3, wine4]
-    }
+//    func loadSampleWines() {
+//        let photo1 = UIImage(named: "carnivor")
+//        let wine1 = Wine(name: "Carnivor", photo: photo1, rating: 5)!
+//        
+//        let photo2 = UIImage(named: "classico")
+//        let wine2 = Wine(name: "Chianti Classico", photo: photo2, rating: 3)!
+//        
+//        let photo3 = UIImage(named: "cassana")
+//        let wine3 = Wine(name: "Cassana", photo: photo3, rating: 2)!
+//        
+//        let photo4 = UIImage(named: "dropsOfJupiter")
+//        let wine4 = Wine(name: "Drops of Jupiter", photo: photo4, rating: 4)!
+//        
+//        wines = [wine1, wine2, wine3, wine4]
+//    }
     
     
     //==========================================================================================================================
@@ -101,11 +102,6 @@ class WineListViewController: UIViewController, UINavigationControllerDelegate, 
         let cellIdentifier = "cell"
         let cell = tblView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! WineListTableViewCell
         
-//        let wine = wines[indexPath.row]
-//        cell.nameLabel.text = wine.name
-//        cell.wineImageView.image = wine.photo
-//        cell.ratingControl.rating = wine.rating
-        
         cell.nameLabel!.text = PFWines[indexPath.row].name
         cell.wineImageView?.image = PFWines[indexPath.row].image
         cell.ratingControl.rating = PFWines[indexPath.row].rating
@@ -119,12 +115,16 @@ class WineListViewController: UIViewController, UINavigationControllerDelegate, 
     }
     
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
+        
+        let deletedRow = tblView.cellForRowAtIndexPath(indexPath)!
+        
+        if editingStyle == UITableViewCellEditingStyle.Delete {
             PFWines.removeAtIndex(indexPath.row)
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+            
+            deletedRow.accessoryType = UITableViewCellAccessoryType.None
         }
     }
-    
     
     
     //==========================================================================================================================
@@ -145,7 +145,6 @@ class WineListViewController: UIViewController, UINavigationControllerDelegate, 
             print("Adding new wine.")
         }
     }
-    
     
     @IBAction func unwindToWineList(sender: UIStoryboardSegue) {
         if let sourceViewController = sender.sourceViewController as? WineViewController, wine = sourceViewController.wine {

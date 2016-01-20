@@ -68,7 +68,6 @@ class WineViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
     
     func checkValidCountryName() {
         let text = countryTextField.text ?? ""
-        saveButton.enabled = !text.isEmpty
     }
     
     func textFieldDidEndEditing(textField: UITextField) {
